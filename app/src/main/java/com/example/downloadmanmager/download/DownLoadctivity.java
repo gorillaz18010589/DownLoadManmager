@@ -36,6 +36,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.downloadmanmager.DeleteFileUtil;
 import com.example.downloadmanmager.FileUtils;
 import com.example.downloadmanmager.MainActivity;
 import com.example.downloadmanmager.R;
@@ -77,6 +78,8 @@ public class DownLoadctivity extends AppCompatActivity {
         downLoadAdapter = new DownLoadAdapter(DownLoadctivity.this, downLoadModels);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(downLoadAdapter);
+
+        DeleteFileUtil.delete("/storage/emulated/0/Download/weixin_800-8.apk");
     }
 
 
